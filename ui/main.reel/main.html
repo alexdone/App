@@ -10,7 +10,10 @@
     {
         "owner": {
             "properties": {
-                "element": {"#": "main"}
+                "element": {"#": "main"},
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true"
             }
         },
         "actionEventListener": {
@@ -18,9 +21,6 @@
             "properties": {
                 "action": "addContent",
                 "handler": {"@": "rangeController"}
-            },
-            "_dev": {
-                "isHidden": true
             }
         },
         "button": {
@@ -36,6 +36,7 @@
             "listeners": [
                 {
                     "type": "action",
+                    "useCapture": true,
                     "listener": {"@": "actionEventListener"}
                 }
             ]
